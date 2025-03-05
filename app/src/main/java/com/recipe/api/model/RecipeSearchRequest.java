@@ -14,11 +14,11 @@ import jakarta.validation.Valid;
  */
 public class RecipeSearchRequest {
     @JsonProperty("searchFilter")
-	@Schema(description = "Search conditions to filter recipes", required = true)
+	@Schema(description = "Search conditions to filter recipes, it will be list of conditions", required = true)
     @Valid
     private List<SearchConditionsRequest> searchConditionsRequests;
 
-	@Schema(description = "Search type (all or any condition)", example = "all", required = true)
+	@Schema(description = "Search type (all or any condition) all will behave like AND and any will behave like OR", example = "all", required = true)
     @EnumValidator(enumClass = SearchConditionRequestInput.class, message = "{searchCondition.invalid}")
     @JsonProperty("type")
     private String searchConditionsType;

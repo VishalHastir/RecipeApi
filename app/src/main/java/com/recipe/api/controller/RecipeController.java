@@ -2,6 +2,7 @@ package com.recipe.api.controller;
 
 import java.util.List;
 import com.recipe.api.entity.Recipe;
+import com.recipe.api.model.GlobalResponse;
 import com.recipe.api.model.RecipeRequest;
 import com.recipe.api.model.RecipeResponse;
 import com.recipe.api.model.RecipeSearchRequest;
@@ -52,8 +53,10 @@ public class RecipeController {
 			responses = {
 					@ApiResponse(responseCode = "200", description = "Success",
 							content = @Content(array = @ArraySchema(schema = @Schema(implementation = RecipeResponse.class)))),
-					@ApiResponse(responseCode = "404", description = "Recipes not found"),
-					@ApiResponse(responseCode = "500", description = "Internal Server Error")
+					@ApiResponse(responseCode = "404", description = "Recipes not found",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class))),
+					@ApiResponse(responseCode = "500", description = "Internal Server Error",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class)))
 			}
 	)
 	@GetMapping
@@ -75,8 +78,10 @@ public class RecipeController {
 			responses = {
 					@ApiResponse(responseCode = "200", description = "Success",
 							content = @Content(schema = @Schema(implementation = RecipeResponse.class))),
-					@ApiResponse(responseCode = "404", description = "Recipe not found"),
-					@ApiResponse(responseCode = "500", description = "Internal Server Error")
+					@ApiResponse(responseCode = "404", description = "Recipe not found",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class))),
+					@ApiResponse(responseCode = "500", description = "Internal Server Error",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class)))
 			}
 	)
 	@GetMapping("/{id}")
@@ -99,8 +104,10 @@ public class RecipeController {
 			responses = {
 					@ApiResponse(responseCode = "201", description = "Recipe created",
 							content = @Content(schema = @Schema(implementation = RecipeResponse.class))),
-					@ApiResponse(responseCode = "400", description = "Bad request"),
-					@ApiResponse(responseCode = "500", description = "Internal Server Error")
+					@ApiResponse(responseCode = "400", description = "Bad request",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class))),
+					@ApiResponse(responseCode = "500", description = "Internal Server Error",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class)))
 			}
 	)
 	@PostMapping
@@ -171,9 +178,12 @@ public class RecipeController {
 			responses = {
 					@ApiResponse(responseCode = "200", description = "Success",
 							content = @Content(array = @ArraySchema(schema = @Schema(implementation = RecipeResponse.class)))),
-					@ApiResponse(responseCode = "400", description = "Bad request"),
-					@ApiResponse(responseCode = "404", description = "Search conditions or recipe not found"),
-					@ApiResponse(responseCode = "500", description = "Internal Server Error")
+					@ApiResponse(responseCode = "400", description = "Bad request",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class))),
+					@ApiResponse(responseCode = "404", description = "Search conditions or recipe not found",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class))),
+					@ApiResponse(responseCode = "500", description = "Internal Server Error",
+							content = @Content(schema = @Schema(implementation = GlobalResponse.class)))
 			}
 	)
 	@PostMapping("/search")
