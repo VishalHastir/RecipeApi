@@ -1,0 +1,10 @@
+{
+  "searchFilter": [
+    {
+      "filterKey": "name",
+      "value": "Pancakes",
+      "operation": "IN"
+    }
+  ],
+  "type": "ALL"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "{{recipeId}}",
+  "name": "Blueberry Pancakes",
+  "instructions": "Mix with blueberries and fry",
+  "type": "VEGETARIAN",
+  "numberOfServings": 2,
+  "ingredients": "flour, milk, eggs, blueberries"
+}
