@@ -17,10 +17,10 @@ Recipe Application is based on microservices architecture. This module can be de
 - Maven 3.x
 
 ### Steps to build application
-* Download code zip / `git clone https://github.com/VishalHastir/recipe`
-* Move to `recipe` and run maven build command `mvn clean package`
-* To build by skipping unit tests run maven command `mvn clean package -DskipTests`
-* On successfully build completion, one should have jar in `target` directory named as `recipe-0.0.1-SNAPSHOT.jar`.
+* Download code zip / `git clone https://github.com/VishalHastir/RecipeApi.git
+* Run maven build command `mvn clean install`
+* To build by skipping unit tests run maven command `mvn clean install -DskipTests`
+* On successfully build completion, one should have jar in `target` directory named as `recipe-1.0.0-SNAPSHOT.jar`.
 
 ### Steps to execute Web Service
 * **Execution with Embedded H2 Database**
