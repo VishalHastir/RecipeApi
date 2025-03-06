@@ -22,6 +22,18 @@ Recipe Application is based on microservices architecture. This module can be de
 * To build by skipping unit tests run maven command `mvn clean install -DskipTests`
 * On successfully build completion, one should have jar in `target` directory named as `recipe-1.0.0-SNAPSHOT.jar`.
 
+## **Running the Application**
+
+Navigate to the `app` module and start the Spring Boot application:
+
+```sh
+cd app
+mvn spring-boot:run
+```
+
+The application will now be running at:  
+👉 **http://localhost:8000**
+
 ### Steps to execute Web Service
 * **Execution with Embedded H2 Database**
   - In Development Mode, by default web service uses [Embedded H2 database] for persisting and retrieving recipes details.
@@ -30,5 +42,4 @@ Recipe Application is based on microservices architecture. This module can be de
   
 * **Usage of all endpoints**
   - Open the swagger-ui with http://localhost:8000/swagger-ui/index.html to check all the API documentation and to perform opreations.
-
 
