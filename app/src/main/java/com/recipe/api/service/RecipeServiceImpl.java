@@ -32,11 +32,14 @@ import com.recipe.api.util.CustomMessagesUtil;
 @Service
 public class RecipeServiceImpl implements RecipeService{
 
-	@Autowired
 	private RecipeRepository recipeRepository;
 
-	@Autowired
 	private CustomMessagesUtil customMessagesUtil;
+
+	public RecipeServiceImpl(RecipeRepository recipeRepository, CustomMessagesUtil customMessagesUtil) {
+		this.recipeRepository = recipeRepository;
+		this.customMessagesUtil = customMessagesUtil;
+	}
 
 	/**
 	 * @return

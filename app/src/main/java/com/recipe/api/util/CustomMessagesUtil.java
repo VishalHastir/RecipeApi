@@ -16,8 +16,11 @@ import java.util.Locale;
 @Component
 public class CustomMessagesUtil {
 
-	@Autowired
     private MessageSource messageSource;
+
+    public CustomMessagesUtil (MessageSource messageSource) {
+        this.messageSource = messageSource;
+    }
 
 
     /**
