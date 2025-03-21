@@ -1,4 +1,4 @@
-# ABNAmro-Assessment: Recipe Application API
+# Recipe Application API
 
 Recipe Application contains REST APIs which contains Create, Update Get, Delete recipes from the database and send JSON response to user.
 
