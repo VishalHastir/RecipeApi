@@ -1,0 +1,47 @@
+recipeId:
+    isNull: "Please provide a valid ID."
+    isNotPositive: "Please provide a valid ID."
+
+recipeName:
+    notNull: "Please provide the recipe name."
+    size: "Name can only be {max} characters."
+    matchingPattern: "The recipe name should contain only letters and the following characters: ',.- and space."
+
+recipeType:
+    invalid: "The recipe type is invalid"
+
+searchCondition:
+    invalid: "The search condition is invalid"
+
+searchOperation:
+    invalid: "The search operation is invalid"
+
+filterKey:
+    invalid: "The filter key is invalid"
+
+numberOfServings:
+    numberValidation: "Please provide the valid number of servings."
+    notNull: "Number of servings can't be null"
+
+instructions:
+    notEmpty: "Please provide a description."
+    size: "The description can only be {max} characters."
+    matchingPattern: "Please provide a valid instruction. Do not use special characters, except: \\ / - + . , ? ! * ( ) ; \""
+
+ingredient:
+    notFound: "Ingredient not found."
+    notEmpty: "Please provide the ingredient name."
+    size: "Ingredient name can only be {max} characters"
+    matchingPattern: "The ingredient name should contain only letters and the following characters: ',.- and space."
+
+recipe:
+    notFound: "Recipe not found."
+    unableToDelete: "Not able to delete recipe, Please try again."
+json:
+    invalidRequest: "Invalid request."
+
+error:
+    internalServerError: "Internal server error."
+
+searchConditions:
+    notFound: "No search conditions has been found."
